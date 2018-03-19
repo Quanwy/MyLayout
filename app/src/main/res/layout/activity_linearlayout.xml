@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#46a3ff"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+    <!--baselineAligned属性的应用-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="true">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="54dp"
+            android:text="First" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="54dp"
+            android:text="Second"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="54dp"
+            android:text="Third"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="true">
+        <!--默认baselineAligned属性是true,（组件中有多行文本的时候基线指的是第一行）-->
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="54dp"
+            android:text="First" />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="54dp"
+            android:text="Second"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="54dp"
+            android:text="Third Button"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="54dp"
+            android:text="First" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="54dp"
+            android:text="Second"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="54dp"
+            android:text="Third Button"/>
+    </LinearLayout>
+
+    <!--权重属性layout_weight，根据设置的属性值分配所占权重比例。
+    组件的android:layout_weight="1"属性和wrap_content属性会产生冲突，
+    从而造成界面显示混乱的情况。要避免冲突，
+    在组件中设置了android:layout_weight="1"属性后，需要将组件的宽度设置为0dp，才能实现按照权重值分配所占位置比例。
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--由于组件的android:layout_weight="1"属性和wrap_content属性会产生冲突，
+    从而造成界面显示并没有按照权重比例分配所占位置。-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:text="First" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:text="This is Second Button!"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:text="Third"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--在组件中设置了android:layout_weight="1"属性后，需要将组件的宽度设置为0dp，
+        才能实现按照权重值分配所占位置比例。如果是高度按权重分配则雷同-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:text="First" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="2"
+            android:text="This is Second Button!"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:text="Third"/>
+    </LinearLayout>
+
+
+
+    <!--组件从上到下排列且位于容器右侧垂直居中显示
+    android:gravity="right|center_vertical"
+    android:orientation="vertical"
+    -->
+    <!--组件从左到右排列且垂直居中显示
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    -->
+
+   <!-- gravity属性值设置线性布局内的组件从上到下排列且位于容器底部水平居中显示-->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="button1" />
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="button2" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

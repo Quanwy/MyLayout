@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#46a3ff"
+              android:orientation="vertical">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 直接添加按钮，占用一行 -->
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="直接放置控件独自占一行"/>
+    </TableLayout>
+
+    <!--注释：定义表格，指定第2列隐藏,第3列拉伸 -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:collapseColumns="1"
+        android:stretchColumns="2">
+
+        <TableRow>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="普通"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="普通"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="允许被拉伸"/>
+
+        </TableRow>
+    </TableLayout>
+    <!--定义一个表格，指定第2列允许收缩 -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="1">
+
+
+        <TableRow>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通"/>
+
+            <Button
+                android:layout_width="700dp"
+                android:layout_height="wrap_content"
+                android:text="宽度700dp的允许被收缩的按钮"/>
+
+            <Button
+                android:layout_width="700dp"
+                android:layout_height="wrap_content"
+                android:text="宽度700dp的按钮"/>
+        </TableRow>
+    </TableLayout>
+    <!-- 注释：定义表格，放置了2行4列，第一行4列均设为可伸展的列
+    在第二行中第一个单元格设置layout_span="2"占了两列，第二个单元格设置了layout_column="3"，指定在第4列显示
+    -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2,3"
+        >
+
+        <TableRow>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通"/>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:text="占2列"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:text="指定在第4列"/>
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>

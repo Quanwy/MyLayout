@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#46a3ff">
+    <!--注释一：设置了android:layout_centerHorizontal="true" ，按钮将会位于RelativeLayout水平中间-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上中"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+/>
+  <!--android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"-->
+
+    <!--注释二：设置了android:layout_centerVertical="true"，按钮将会位于RelativeLayout垂直中间
+    且设置了android:layout_alignParentLeft="true" 将会位于父布局的左边-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="左中" />
+    <!--注释三：设置了android:layout_alignParentBottom="true" ,按钮将会位于父布局的底部-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="下中" />
+    <!--注释四：设置了android:layout_alignParentRight="true" 按钮将会位于父布局的右边-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="右中" />
+    <!--注释五：设置了 android:layout_centerInParent="true"，按钮将会位于父控件的中心-->
+    <Button
+        android:id="@+id/btnCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="正中" />
+    <!--注释六：设置了 android:layout_above="@+id/benCenter" ，按钮将会位于所设id控件的上方
+    android:layout_centerHorizontal="true"位于父控件的水平居中位置-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正中靠上"
+        android:layout_above="@+id/btnCenter"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button" />
+    <!--注释七：设置了android:layout_toLeftOf="@+id/benCenter"" ，按钮将会位于所设id控件的左边
+         android:layout_alignBottom="@+id/benCenter"将会与所设id控件底部对齐-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnCenter"
+        android:layout_toLeftOf="@+id/btnCenter"
+        android:text="正中靠左" />
+    <!--注释八：设置了android:layout_toRightOf="@+id/benCenter"" ，按钮将会位于所设id控件的右边
+             android:layout_alignBaseline="@+id/benCenter"将会与所设id控件基线对齐-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnCenter"
+        android:layout_toRightOf="@+id/btnCenter"
+        android:text="正中靠右" />
+    <!--注释九：设置了android:layout_below="@+id/benCenter" ，按钮将会位于所设id控件的下面，
+    android:layout_centerHorizontal="true"位于父控件的水平居中位置         -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCenter"
+        android:layout_centerHorizontal="true"
+        android:text="正中靠下" />
+</RelativeLayout>
